@@ -36,6 +36,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 # Allow the origin from where you are sending the request
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3005',
+    'https://645b84be0985ce00668fb6dc--playful-swan-3bbf53.netlify.app',
 ]
 
 # Application definition
