@@ -33,6 +33,13 @@ ALLOWED_HOSTS = ['.vercel.app']
 #  ...rest will be same
 CORS_ALLOW_ALL_ORIGINS = True
 
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "PATCH",
+    "POST",
+    "PUT",
+]
 # Allow the origin from where you are sending the request
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3005',
