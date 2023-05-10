@@ -42,7 +42,7 @@ CORS_ALLOW_METHODS = [
 ]
 # Allow the origin from where you are sending the request
 CORS_ORIGIN_WHITELIST = [
-    'https://645b8fb8ed8954074a8b9dc3--scintillating-mochi-416718.netlify.app',
+    'https://iskcon-a4720.web.app',
 ]
 
 # Application definition
