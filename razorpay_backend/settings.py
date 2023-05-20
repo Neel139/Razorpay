@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-1l-@5r=g7z608rmfvkhtgbfln**-8w9nu2226sg^am@mc)#m!r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,6 +41,7 @@ CORS_ALLOW_METHODS = [
     "PATCH",
     "POST",
     "PUT",
+    'HEAD'
 ]
 # Allow the origin from where you are sending the request
 CORS_ORIGIN_WHITELIST = [
