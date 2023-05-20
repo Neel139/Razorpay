@@ -43,6 +43,16 @@ CORS_ALLOW_METHODS = [
     "PUT",
     'HEAD'
 ]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
 # Allow the origin from where you are sending the request
 CORS_ORIGIN_WHITELIST = [
     'https://iskcon-a4720.web.app',
@@ -71,7 +81,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'app.CorsMiddleware',
+    # 'app.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'razorpay_backend.urls'
