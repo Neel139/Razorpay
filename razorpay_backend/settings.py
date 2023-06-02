@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-1l-@5r=g7z608rmfvkhtgbfln**-8w9nu2226sg^am@mc)#m!r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -56,6 +56,7 @@ CORS_ALLOW_HEADERS = [
 # Allow the origin from where you are sending the request
 CORS_ORIGIN_WHITELIST = [
     'https://iskcon-a4720.web.app',
+    'http://localhost:3000'
 ]
 
 # Application definition
@@ -89,7 +90,7 @@ ROOT_URLCONF = 'razorpay_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

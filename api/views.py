@@ -3,16 +3,17 @@ import environ
 import razorpay
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from django.shortcuts import render
 from .models import Order
 from .serializers import OrderSerializer
 
 env = environ.Env()
-
 # you have to create .env file in same folder where you are using environ.Env()
 # reading .env file which located in api folder
 environ.Env.read_env()
 
+def index(request):
+    return render(request,'index.html')
 
 @api_view(['POST'])
 def start_payment(request):
